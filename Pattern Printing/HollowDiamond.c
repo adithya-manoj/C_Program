@@ -1,28 +1,47 @@
 #include <stdio.h>
-
 int main()
 {
-    int i, j, n;
-    printf("Enter the Number of Rows ");
+    int n, rows, columns;
+    printf("Enter the number of Rows: ");
     scanf("%d", &n);
-
-    for(i=0;i<n;i++){
-
-        for(j=0;j<n-i;j++){
+    
+    for (rows = 1; rows <= n; rows++) {
+ 
+        for (columns = n; columns > rows; columns--) {
             printf(" ");
-
         }
+  
         printf("*");
-        
-
-        for (j = 0; j < 2*i; j++) {
-            printf(" ");}
-            printf("*");     
-            printf("\n");
-               
+ 
+        for (columns = 1; columns < (rows - 1) * 2;
+             columns++) {
+            printf(" ");
         }
-        
-        
-        
-        
+        if (rows == 1) {
+            printf("\n");
+        }
+        else {
+            printf("*\n");
+        }
+    }
+
+    for (rows = n - 1; rows >= 1; rows--) {
+ 
+        for (columns = n; columns > rows; columns--) {
+            printf(" ");
+        }
+ 
+        printf("*");
+        for (columns = 1; columns < (rows - 1) * 2;
+             columns++) {
+            printf(" ");
+        }
+        if (rows == 1) {
+            printf("\n");
+        }
+        else {
+            printf("*\n");
+        }
+    }
+    return 0;
 }

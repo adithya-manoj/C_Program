@@ -1,7 +1,17 @@
 #include <stdio.h>
+
+int gcd(int num1, int num2){
+
+        if(num2==0){
+            return num1;
+        }
+        else{
+            return gcd(num2, num1 % num2);
+        }
+    } 
 int main() 
 {
-    int num1, num2,gcd,i;
+    int num1, num2,i;
 
     printf("Enter the number 1:");
     scanf("%d", &num1);
@@ -9,11 +19,7 @@ int main()
     printf("Enter the number 2:");
     scanf("%d", &num2);
 
-    for(i=1; i<=num1 && i<=num2; i++){
-        if(num1 % i == 0 && num2 % i == 0){
-        gcd = i;
-        }
-    } 
-    printf( " The HCF of two numbers %d and %d is %d. ", num1, num2, gcd ); 
+   
+    printf( " The HCF of two numbers is %d. ", gcd(num1, num2)); 
     return 0;
 }

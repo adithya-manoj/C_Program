@@ -4,7 +4,7 @@ int main()
 {
 int i,j, n=7;
 
-for(i=0;i<=2*n;i++){
+for(i=0;i<=2*n-2;i++){
 
 
 printf("*");

@@ -1,15 +1,17 @@
 #include <stdio.h>
 
+int factorial(int num){
+       return fact*=  i;
+    }
+
+
 int main(){
 
     int i,num,fact=1;
     printf("Enter the Number: ");
     scanf("%d", &num);
 
-    for(i=1;i<=num;i++){
-        fact*=  i;
-    }
+    printf("%d", factorial(num));
 
-    printf("%d", fact);
     return 0;
 }
